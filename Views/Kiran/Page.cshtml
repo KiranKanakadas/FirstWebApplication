@@ -1,0 +1,33 @@
+﻿@using FirstWebApplication.Models;
+@model List<Student>;
+<style>
+    table, td, th
+    {
+        border:1px solid black;
+    }
+</style>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Marks</th>
+        <th>Status</th><!--Status used for showing whether student failed or passed-->
+    </tr>@foreach (var item in Model) 
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Id</td>
+            <td>@item.Id</td>
+            @if (item.Marks > 35) 
+            {
+                <td>Passed</td>
+            }
+             else 
+            {
+                <td>Failed</td>
+            }
+
+        </tr>
+    }
+     
+</table>
